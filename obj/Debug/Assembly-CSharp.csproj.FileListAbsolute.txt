@@ -1,0 +1,11 @@
+I:\unityprojects\mini_lol\Temp\bin\Debug\Assembly-CSharp.dll
+I:\unityprojects\mini_lol\Temp\bin\Debug\Assembly-CSharp.pdb
+I:\unityprojects\mini_lol\Temp\bin\Debug\UnityEditor.dll
+I:\unityprojects\mini_lol\Temp\bin\Debug\UnityEngine.dll
+I:\unityprojects\mini_lol\Temp\bin\Debug\Mono.Cecil.dll
+I:\unityprojects\mini_lol\Temp\bin\Debug\nunit.framework.dll
+I:\unityprojects\mini_lol\Temp\bin\Debug\Unity.DataContract.dll
+I:\unityprojects\mini_lol\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+I:\unityprojects\mini_lol\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+I:\unityprojects\mini_lol\obj\Debug\Assembly-CSharp.dll
+I:\unityprojects\mini_lol\obj\Debug\Assembly-CSharp.pdb

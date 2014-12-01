@@ -13,15 +13,17 @@ public class Main : MonoBehaviour
     public GameObject mEzreal_Normal;
     
     List<GameObject> mEntities = new List<GameObject>();
-        
+                    
 	// Use this for initialization
-	void Start () {
-	
+	void Start () 
+    {
+        
 	}
 	
 	// 플레이어를 따라 다니게 만들자.
 	void Update ()
-    {        
+    {
+        
 	}
 
     public void AddEntity(GameObject obj)
@@ -32,6 +34,30 @@ public class Main : MonoBehaviour
     public void RemoveEntity(GameObject obj)
     {
         mEntities.Remove(obj);        
+    }
+
+    public GameObject SelectCloestEntity(TeamIDs teamId, Vector3 worldPos)
+    {
+        GameObject returnGameObject = null;
+        float minDistance = float.MaxValue;
+        
+        foreach ( GameObject entity in mEntities )
+        {
+            EntityData entityData = entity.GetComponent<EntityData>();
+            if ( entityData.mTeamIds != teamId )
+            {
+                Vector3 pos = entity.transform.position;                                                                
+                float distance = Vector3.Distance(pos, worldPos);
+
+                if (distance < minDistance)
+                {
+                    returnGameObject = entity;
+                    minDistance = distance;
+                }
+            }
+        }
+
+        return returnGameObject;
     }
 
     public List<GameObject> SelectEntities(TeamIDs teamId, Vector3 mousePos)
@@ -84,6 +110,16 @@ public class Main : MonoBehaviour
         return mNexuses[0];        
     }
 
+    public void MoveCameraX(float amount)
+    {
+        Camera.main.transform.position += new Vector3(amount, 0, 0);        
+    }
+
+    public void MoveCameraZ(float amount)
+    {
+        Camera.main.transform.position += new Vector3(0, 0, amount);
+    }
+    
     public static Vector3 GetMousePositionInWorld()
     {
         Vector3 worldPos = Vector3.zero;
@@ -98,5 +134,6 @@ public class Main : MonoBehaviour
         return worldPos;
     }
      
+
 
 }
